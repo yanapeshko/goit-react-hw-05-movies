@@ -1,0 +1,14 @@
+.box {
+  display: flex;
+  padding: 10px 0 10px 0;
+  border-bottom: 1px solid #2a363b;
+}
+
+.description {
+  padding: 0 20px;
+}
+
+.additional {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #2a363b;
+}
