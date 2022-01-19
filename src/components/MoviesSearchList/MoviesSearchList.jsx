@@ -7,11 +7,19 @@ export default function MoviesSearchList({ search }) {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    if (!search) {
-      return;
-    }
+    async function getSearch() {
+      try {
+        if (!search) {
+          return;
+        }
 
-    searchApiService(search).then(data => setMovies(data));
+        const data = await searchApiService(search);
+        setMovies(data);
+      } catch (e) {
+        console.error(e);
+      }
+    }
+    getSearch();
   }, [search]);
 
   return (

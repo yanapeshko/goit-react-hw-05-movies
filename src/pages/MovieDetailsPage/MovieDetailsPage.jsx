@@ -14,9 +14,7 @@ import Button from 'components/Button';
 import s from './MovieDetailsPage.module.css';
 
 const Cast = lazy(() => import('components/Cast/Cast.jsx'));
-const Reviews = lazy(() =>
-  import('components/Reviews/Reviews.jsx' /* webpackChunkName: "Reviews" */),
-);
+const Reviews = lazy(() => import('components/Reviews/Reviews.jsx'));
 
 export default function MovieDetailsPage() {
   const navigate = useNavigate();
